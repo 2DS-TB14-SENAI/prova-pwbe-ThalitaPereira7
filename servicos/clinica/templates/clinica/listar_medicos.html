@@ -1,0 +1,31 @@
+{% extends 'clinica/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clínica</title>
+</head>
+<body>
+    <h1>Lista de Médicos</h1>
+
+    <ul>
+        {% for medico in listar_medicos %}
+            <li>{{ medico.nome }} - {{ medico.especialidade }}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="get">
+        <label>Filtrar por especialidade:</label>
+        <select name="especialidade">
+            <option value="Pediatria">Pediatria</option>
+            <option value="Ginecologia">Ginecologia</option>
+            <option value="Oftalmologia">Oftalmologia</option>
+        </select>
+        <button type="submit">Filtrar</button>
+    </form>
+    
+    
+</body>
+</html>
+{% endblock %}

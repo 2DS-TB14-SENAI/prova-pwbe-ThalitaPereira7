@@ -1,0 +1,20 @@
+{% extends 'clinica/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Consulta</title>
+</head>
+<body>
+
+    <h1>Consulta de {{ consulta.paciente }}</h1>
+    <p><strong>Médico:</strong> {{ consulta.medico }}</p>
+    <p><strong>Data:</strong> {{ consulta.data }}</p>
+    <p><strong>Status:</strong> {{ consulta.get_status_display }}</p>
+
+    
+</body>
+</html>
+{% endblock %}
+

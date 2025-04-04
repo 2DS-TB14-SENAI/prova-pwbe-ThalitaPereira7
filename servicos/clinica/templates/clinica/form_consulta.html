@@ -1,0 +1,22 @@
+{% extends 'clinica/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Consulta</title>
+</head>
+<body>
+
+    <h1>Marcar Consulta</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }} 
+        <button type="submit">Salvar</button>
+    </form>
+
+    
+</body>
+</html>
+{% endblock %}
